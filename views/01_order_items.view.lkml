@@ -27,7 +27,7 @@ view: order_items {
   }
 
   measure: count_last_28d {
-    label: "Count Sold in Trailing 28 Days"
+    label: "Count Sold in Trailing 30 Days"
     type: count_distinct
     sql: ${id} ;;
     hidden: yes
@@ -164,7 +164,7 @@ view: order_items {
 
   dimension_group: delivered {
     type: time
-    timeframes: [date, week, month, raw]
+    timeframes: [day_of_week,date, week, month, raw]
     sql: CAST(${TABLE}.delivered_at AS TIMESTAMP) ;;
 
   }
