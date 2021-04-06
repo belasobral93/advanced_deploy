@@ -164,7 +164,7 @@ view: order_items {
 
   dimension_group: delivered {
     type: time
-    timeframes: [day_of_week,date, week, month, raw]
+    timeframes: [day_of_week,day_of_month,date, week, month, raw]
     sql: CAST(${TABLE}.delivered_at AS TIMESTAMP) ;;
 
   }
