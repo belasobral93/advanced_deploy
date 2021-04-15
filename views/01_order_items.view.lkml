@@ -157,7 +157,7 @@ view: order_items {
 
   dimension_group: shipped {
     type: time
-    timeframes: [year,day_of_week,day_of_month,date, week, month, raw]
+    timeframes: [fiscal_quarter_of_year,year,day_of_week,day_of_month,date, week, month, raw]
     sql: CAST(${TABLE}.shipped_at AS TIMESTAMP) ;;
 
   }
