@@ -9,7 +9,7 @@ include: "/dashboards/*.dashboard.lookml" # include all the views
 
 datagroup: ecommerce_etl {
   sql_trigger: SELECT max(created_at) FROM ecomm.events ;;
-  max_cache_age: "20 hours"
+  max_cache_age: "25 hours"
 }
 
 persist_with: ecommerce_etl
