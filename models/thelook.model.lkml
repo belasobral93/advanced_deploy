@@ -58,11 +58,11 @@ explore: order_items {
     sql_on: ${order_items.order_id} = ${repeat_purchase_facts.order_id} ;;
   }
 
-  join: distribution_centers {
-    type: left_outer
-    sql_on: ${distribution_centers.id} = ${inventory_items.product_distribution_center_id} ;;
-    relationship: many_to_one
-  }
+  # join: distribution_centers {
+  #   type: left_outer
+  #   sql_on: ${distribution_centers.id} = ${inventory_items.product_distribution_center_id} ;;
+  #   relationship: many_to_one
+  # }
 }
 
 

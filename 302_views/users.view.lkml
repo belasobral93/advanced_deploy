@@ -14,6 +14,8 @@ view: users {
     sql: ${TABLE}.age ;;
   }
 
+
+
   dimension: age_tiers {
     type: tier
     sql: ${age} ;;

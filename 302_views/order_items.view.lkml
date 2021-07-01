@@ -130,6 +130,7 @@ view: order_items {
     value_format_name: "usd"
   }
 
+
   measure: percent_of_revenue {
     type: percent_of_total
     sql: ${total_gross_revenue};;
@@ -141,6 +142,7 @@ view: order_items {
     sql: ${total_gross_revenue} - ${inventory_items.total_cost} ;;
     value_format_name: "usd"
     drill_fields: [inventory_items.product_category, inventory_items.product_brand]
+    html: {{ rendered_value }} || {{ total_gross_revenue._rendered_value }} of total>> ;;
   }
 
   measure: average_gross_margin {
