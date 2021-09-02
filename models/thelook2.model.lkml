@@ -16,7 +16,7 @@ persist_with: ecommerce_etl
 ############ Base Explores #############
 
 explore: order_items {
-  label: "TEST 2"
+  label: "RECORDING TEST"
   view_name: order_items
 
   join: order_facts {
