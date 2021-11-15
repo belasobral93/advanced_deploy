@@ -29,7 +29,7 @@ explore: order_items {
 
   join: order_facts {
     type: left_outer
-    view_label: "v3"
+    view_label: "first change"
     relationship: many_to_one
     sql_on: ${order_facts.order_id} = ${order_items.order_id} ;;
   }
