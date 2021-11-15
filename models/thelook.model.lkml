@@ -24,7 +24,7 @@ explore: date_test {
 }
 
 explore: order_items {
-  label: "v1"
+  label: "v4"
   view_name: order_items
 
   join: order_facts {
