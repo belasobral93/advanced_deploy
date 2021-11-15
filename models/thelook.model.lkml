@@ -15,8 +15,16 @@ datagroup: ecommerce_etl {
 persist_with: ecommerce_etl
 ############ Base Explores #############
 
+explore: date_test {
+  from: order_items
+  join: calendar {
+    type: inner
+    sql_on: ${date_test.created_date} = ${calendar.date_join} ;;
+  }
+}
+
 explore: order_items {
-  label: "recording test"
+  label: "New Explore"
   view_name: order_items
 
   join: order_facts {
@@ -67,6 +75,7 @@ explore: order_items {
 
 
 #########  Event Data Explores #########
+
 
 explore: events {
   label: "(2) Web Event Data"
