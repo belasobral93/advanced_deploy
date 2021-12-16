@@ -24,7 +24,7 @@ explore: date_test {
 }
 
 explore: order_items {
-  label: "second change"
+  label: "this is a new change"
   view_name: order_items
 
   join: order_facts {
